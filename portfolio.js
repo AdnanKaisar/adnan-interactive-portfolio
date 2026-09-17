@@ -22,7 +22,7 @@ document.querySelectorAll('[data-certificate-viewer]').forEach(card=>card.addEve
   certificateViewer.classList.add('open');
 }));
 certificateStart.addEventListener('click',()=>{
-  certificateFrame.src='cis-df-certificate.pdf#view=FitH';
+  certificateFrame.src='/certificates/cis-df-certificate.pdf#view=FitH';
   certificateViewer.classList.add('started');
 });
 document.querySelector('.certificate-close').addEventListener('click',()=>{

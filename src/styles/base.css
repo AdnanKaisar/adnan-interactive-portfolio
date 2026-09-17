@@ -1,0 +1,68 @@
+/* src/styles/base.css */
+/* Reset and global styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  background: #0d0d0d;
+  color: #f0f0f0;
+}
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(13,13,13,0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 100%;
+  background: #ff6a00;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+.section {
+  padding: 8rem 2rem;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.section:nth-child(even) {
+  background: rgba(255,255,255,0.05);
+}
+h1, h2 {
+  margin-bottom: 1rem;
+}

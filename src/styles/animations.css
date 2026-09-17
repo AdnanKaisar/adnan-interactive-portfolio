@@ -1,0 +1,6 @@
+/* src/styles/animations.css */
+/* Simple fade‑in on scroll using GSAP */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+}

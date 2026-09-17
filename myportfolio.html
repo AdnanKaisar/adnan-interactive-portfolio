@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Adnan Kaisar — Full-stack developer building reliable web applications, AI automation platforms, and practical digital products.">
+  <title>Adnan Kaisar | Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=20260913-10">
+</head>
+
+<body>
+
+  <!-- ======================== INTRO SCREEN ======================== -->
+  <div id="intro-screen" class="intro-screen">
+    <div class="logo-intro">ADNAN KAISAR</div>
+    <h1>Manage your profile</h1>
+    <div class="profiles">
+      <div class="profile" onclick="enterPortfolio('Recruiter')">
+        <div class="avatar recruiter-avatar" style="background:transparent; border:none;">
+          <svg viewBox="0 0 100 100" width="100%" height="100%">
+            <rect width="100" height="100" rx="10" fill="#2d82e6" />
+            <circle cx="35" cy="45" r="6" fill="white" />
+            <circle cx="65" cy="45" r="6" fill="white" />
+            <path d="M 35 65 Q 50 80 65 65" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" />
+          </svg>
+        </div>
+        <span class="profile-name">Recruiter</span>
+      </div>
+      <div class="profile" onclick="enterPortfolio('Lost Kid')">
+        <div class="avatar dev-avatar" style="background:transparent; border:none;">
+          <svg viewBox="0 0 100 100" width="100%" height="100%">
+            <rect width="100" height="100" rx="10" fill="#e50914" />
+            <circle cx="35" cy="45" r="6" fill="white" />
+            <circle cx="65" cy="45" r="6" fill="white" />
+            <path d="M 35 65 Q 50 80 65 65" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" />
+          </svg>
+        </div>
+        <span class="profile-name">Developer</span>
+      </div>
+      <div class="profile" onclick="enterPortfolio('Stalker')">
+        <div class="avatar friend-avatar" style="background:transparent; border:none;">
+          <svg viewBox="0 0 100 100" width="100%" height="100%">
+            <rect width="100" height="100" rx="10" fill="#f4b400" />
+            <circle cx="35" cy="45" r="6" fill="white" />
+            <circle cx="65" cy="45" r="6" fill="white" />
+            <path d="M 35 65 Q 50 80 65 65" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" />
+          </svg>
+        </div>
+        <span class="profile-name">Stalker</span>
+      </div>
+      <div class="profile" onclick="enterPortfolio('Investor')">
+        <div class="avatar investor-avatar" style="background:transparent; border:none;">
+          <svg viewBox="0 0 100 100" width="100%" height="100%">
+            <rect width="100" height="100" rx="10" fill="#0f9d58" />
+            <circle cx="35" cy="45" r="6" fill="white" />
+            <circle cx="65" cy="45" r="6" fill="white" />
+            <path d="M 35 65 Q 50 80 65 65" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" />
+          </svg>
+        </div>
+        <span class="profile-name">Lost Kid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== MAIN PORTFOLIO ======================== -->
+  <div id="main-app" class="main-app hidden">
+
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="nav-left">
+        <div class="logo">ADNAN KAISAR</div>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#internships">Internships</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <div class="search-icon"><i class="fas fa-search"></i></div>
+        <div class="nav-links-mobile">
+          <a href="#contact" style="color:white;text-decoration:none;font-weight:bold;margin-right:20px;">Contact</a>
+        </div>
+        <div class="nav-profile" onclick="exitPortfolio()" style="cursor: pointer;" title="Switch Profile">
+          <img id="nav-avatar" src="myimage.jpeg" alt="Profile"
+            onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png'">
+          <i class="fas fa-caret-down"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <div class="hero-logo-text" style="color: #e50914;">
+          <h2 style="font-size:3rem; font-weight:bold; letter-spacing: 2px;">Building products that move work forward.</h2>
+        </div>
+        <p class="hero-description" style="font-size: 1.2rem; max-width: 600px; margin-bottom: 20px;">
+          Full-stack developer focused on thoughtful user experiences, dependable APIs, and intelligent automation.
+          Explore selected work, capabilities, and the impact behind each project.
+        </p>
+        <div class="hero-buttons">
+          <a href="ADNAN_resume.pdf" class="btn btn-play" download="ADNAN_resume.pdf"><i class="fas fa-file-download"></i> Download Resume</a>
+          <a href="https://www.linkedin.com/in/adnan-kaisar-333622292" target="_blank" class="btn btn-more"><i
+              class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-image-container">
+        <img src="myimage.jpeg" alt="Adnan Kaisar" class="hero-profile-img">
+      </div>
+      <div class="hero-vignette"></div>
+      <div class="hero-bottom-fade"></div>
+    </section>
+
+    <!-- Content Rows -->
+    <div class="content-rows">
+
+      <!-- Top Picks (About) -->
+      <div class="row" id="about">
+        <h2 class="row-title">Top Picks for You</h2>
+        <div class="slider-wrapper">
+          <button class="slider-btn left"><i class="fas fa-chevron-left"></i></button>
+          <div class="row-container">
+            <div class="tile-top-pick" onclick="openModal('linkedin')">
+              <i class="fab fa-linkedin" style="font-size: 4.5rem; color: #00a2ff; margin-bottom: 20px; filter: drop-shadow(0 4px 12px rgba(0, 162, 255, 0.3));"></i>
+              <h3 style="color: #ffffff; font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+                LINKEDIN</h3>
+            </div>
+
+            <div class="tile-top-pick" onclick="openModal('schedule')">
+              <i class="fas fa-calendar-alt" style="font-size: 4.5rem; color: #ffae19; margin-bottom: 20px; filter: drop-shadow(0 4px 12px rgba(255, 174, 25, 0.3));"></i>
+              <h3 style="color: #ffffff; font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+                SCHEDULE A CALL</h3>
+            </div>
+
+            <div class="tile-top-pick" onclick="openModal('github')">
+              <i class="fab fa-github" style="font-size: 4.5rem; color: #ffffff; margin-bottom: 20px; filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.15));"></i>
+              <h3 style="color: #ffffff; font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+                GITHUB</h3>
+            </div>
+          </div>
+          <button class="slider-btn right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Projects Row -->
+      <div class="row" id="projects">
+        <h2 class="row-title">Selected work</h2>
+        <div class="slider-wrapper">
+          <button class="slider-btn left"><i class="fas fa-chevron-left"></i></button>
+          <div class="row-container">
+            <div class="tile tile-large project-card" onclick="openModal('portfolio_project')">
+              <div class="tile-img bg-red">
+                <i class="fas fa-layer-group"></i>
+                <h2>PORTFOLIO</h2>
+              </div>
+              <div class="tile-info">
+                <div class="tile-actions">
+                  <a href="https://github.com/AdnanKaisar" target="_blank" class="btn-circle"><i
+                      class="fas fa-play"></i></a>
+                  <button class="btn-circle outline"><i class="fas fa-plus"></i></button>
+                </div>
+                <span class="match">Personal product</span> <span class="age">Frontend</span>
+                <h3>Netflix-Inspired Portfolio</h3>
+                <p>Interactive portfolio experience for projects, skills, and growth.</p>
+                <div class="tags">React &bull; JavaScript &bull; HTML &bull; CSS</div>
+                <button class="project-more" onclick="event.stopPropagation(); openModal('portfolio_project')">More Info</button>
+              </div>
+            </div>
+            <div class="tile tile-large project-card" onclick="openModal('self_tasking_agent')">
+              <div class="tile-img bg-dark">
+                <i class="fas fa-robot"></i>
+                <h2>SELF-TASKING AI</h2>
+              </div>
+              <div class="tile-info">
+                <div class="tile-actions">
+                  <a href="https://github.com/AdnanKaisar" target="_blank" class="btn-circle"><i
+                      class="fas fa-play"></i></a>
+                </div>
+                <span class="match">AI platform</span> <span class="age">Automation</span>
+                <h3>Self-Tasking AI Agent</h3>
+                <p>Conversational agent that understands and executes multi-step tasks.</p>
+                <div class="tags">Python &bull; FastAPI &bull; React &bull; LangChain</div>
+                <button class="project-more" onclick="event.stopPropagation(); openModal('self_tasking_agent')">More Info</button>
+              </div>
+            </div>
+            <div class="tile tile-large project-card" onclick="openModal('sharebite')">
+              <div class="tile-img bg-sharebite">
+                <i class="fas fa-leaf"></i>
+                <h2>SHAREBITE</h2>
+              </div>
+              <div class="tile-info">
+                <div class="tile-actions">
+                  <a href="https://sharebite-one.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-circle" onclick="event.stopPropagation()"><i class="fas fa-play"></i></a>
+                  <button class="btn-circle outline" onclick="event.stopPropagation(); openModal('sharebite')"><i class="fas fa-plus"></i></button>
+                </div>
+                <span class="match">Featured project</span> <span class="age">Full Stack</span>
+                <h3>Food Donation Platform</h3>
+                <p>Connects surplus food with people and organizations in need.</p>
+                <div class="tags">React &bull; Node &bull; Express &bull; MongoDB</div>
+                <a class="project-demo" href="https://sharebite-one.vercel.app" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <button class="project-more" onclick="event.stopPropagation(); openModal('sharebite')">More Info</button>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Internships Row -->
+      <div class="row" id="internships">
+        <h2 class="row-title">Internships</h2>
+        <div class="slider-wrapper">
+          <button class="slider-btn left"><i class="fas fa-chevron-left"></i></button>
+          <div class="row-container">
+            <div class="tile tile-large" onclick="openModal('internship_nit')">
+              <div class="tile-img bg-red">
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px; box-sizing: border-box; width: 100%; height: 100%;">
+                  <i class="fas fa-microchip" style="font-size: 2.5rem; margin-bottom: 10px; color: white;"></i>
+                  <h2 style="font-size: 1.4rem; margin: 0; text-align: center;">IoT Internship</h2>
+                </div>
+              </div>
+              <div class="tile-info">
+                <h3>NIT Srinagar</h3>
+                <span class="match">Completed</span> <span class="age">IoT</span>
+                <p>Internet of Things research and development at NIT Srinagar.</p>
+                <div class="tags">IoT &bull; Sensors &bull; Hardware</div>
+              </div>
+            </div>
+            <div class="tile tile-large" onclick="openModal('internship_web_nit')">
+              <div class="tile-img bg-blue">
+                <div class="internship-card-content">
+                  <i class="fas fa-code"></i>
+                  <h2>WEB DEVELOPMENT</h2>
+                  <span>NIT SRINAGAR</span>
+                </div>
+              </div>
+              <div class="tile-info">
+                <h3>NIT Srinagar</h3>
+                <span class="match">Excellent</span> <span class="age">Web Development</span>
+                <p>Web Development Internship-cum-Project, 15 June – 15 July 2026.</p>
+                <div class="tags">Frontend &bull; Web Technologies &bull; Debugging</div>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Skills Row -->
+      <div class="row" id="skills">
+        <h2 class="row-title">Trending Skills</h2>
+        <div class="slider-wrapper">
+          <button class="slider-btn left"><i class="fas fa-chevron-left"></i></button>
+          <div class="row-container">
+            <div class="tile tile-small">
+              <div class="tile-img"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                  style="width:50px; margin-bottom:10px;"> <span>HTML</span></div>
+              <div class="tile-info"><span class="match">90% Match</span>
+                <p>Language</p>
+              </div>
+            </div>
+            <div class="tile tile-small">
+              <div class="tile-img"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                  style="width:50px; margin-bottom:10px;"> <span>CSS</span></div>
+              <div class="tile-info"><span class="match">85% Match</span>
+                <p>Language</p>
+              </div>
+            </div>
+            <div class="tile tile-small">
+              <div class="tile-img"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                  style="width:50px; margin-bottom:10px;"> <span>Python</span></div>
+              <div class="tile-info"><span class="match">70% Match</span>
+                <p>Language</p>
+              </div>
+            </div>
+            <div class="tile tile-small">
+              <div class="tile-img"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                  style="width:50px; margin-bottom:10px;"> <span>C/C++</span></div>
+              <div class="tile-info"><span class="match">55% Match</span>
+                <p>Language</p>
+              </div>
+            </div>
+            <div class="tile tile-small">
+              <div class="tile-img"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  style="width:50px; margin-bottom:10px;"> <span>JavaScript</span></div>
+              <div class="tile-info"><span class="match">40% Match</span>
+                <p>Language</p>
+              </div>
+            </div>
+            <div class="tile tile-small">
+              <div class="tile-img"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"
+                  style="width:50px; margin-bottom:10px;"> <span>Pandas</span></div>
+              <div class="tile-info"><span class="match">65% Match</span>
+                <p>Library</p>
+              </div>
+            </div>
+            <div class="tile tile-small">
+              <div class="tile-img"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg"
+                  style="width:50px; margin-bottom:10px;"> <span>NumPy</span></div>
+              <div class="tile-info"><span class="match">60% Match</span>
+                <p>Library</p>
+              </div>
+            </div>
+            <div class="tile tile-small">
+              <div class="tile-img"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                  style="width:50px; margin-bottom:10px;"> <span>VS Code</span></div>
+              <div class="tile-info"><span class="match">85% Match</span>
+                <p>Tool</p>
+              </div>
+            </div>
+            <div class="tile tile-small">
+              <div class="tile-img"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                  style="width:50px; filter: invert(1); margin-bottom:10px;"> <span>Git & GitHub</span></div>
+              <div class="tile-info"><span class="match">65% Match</span>
+                <p>Tool</p>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Certifications Row -->
+      <div class="row" id="certifications">
+        <h2 class="row-title">Certifications</h2>
+        <div class="slider-wrapper">
+          <button class="slider-btn left"><i class="fas fa-chevron-left"></i></button>
+          <div class="row-container">
+            <a href="https://drive.google.com/file/d/1BkjvIGRoU07gOn2_VEse98tb5J2zqqf9/view" target="_blank"
+              class="tile tile-med">
+              <div class="tile-img cert-bg"><img
+                  src="https://yt3.googleusercontent.com/LkCd4235_fTI6GZA4yvfafwrpL8P7kRCY9woKGcFwPyl1PCQ0vS24wfdgFgkgN462un6vY1F=s900-c-k-c0x00ffffff-no-rj"
+                  class="cert-logo"></div>
+              <div class="tile-info">
+                <h3>ServiceNow</h3>
+                <span class="match">ServiceNow CIS</span>
+                <p>Data Foundations</p>
+              </div>
+            </a>
+            <a href="https://drive.google.com/file/d/17mffkwOmt4c66jFifM_60_Q-XuGdwHhQ/view?usp=drive_link"
+              target="_blank" class="tile tile-med">
+              <div class="tile-img cert-bg"><img
+                  src="https://yt3.googleusercontent.com/LkCd4235_fTI6GZA4yvfafwrpL8P7kRCY9woKGcFwPyl1PCQ0vS24wfdgFgkgN462un6vY1F=s900-c-k-c0x00ffffff-no-rj"
+                  class="cert-logo"></div>
+              <div class="tile-info">
+                <h3>ServiceNow</h3>
+                <span class="match">Micro-Certification</span>
+                <p>Welcome to ServiceNow</p>
+              </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1CpgdFXjL4K1nnSyU6Hnrga5Mm2q7YYJf/view" target="_blank"
+              class="tile tile-med">
+              <div class="tile-img cert-bg"><img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2dM9xatiM43ij9A-d5gg9Aj9KWXvhV1FU2w&s"
+                  class="cert-logo"></div>
+              <div class="tile-info">
+                <h3>IBM</h3>
+                <span class="match">Python for Data Science</span>
+                <p>AI & Development</p>
+              </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1yHyDgQjSFXBAS0LciiTLwsMeqOXJnrcq/view" target="_blank"
+              class="tile tile-med">
+              <div class="tile-img cert-bg"><img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2dM9xatiM43ij9A-d5gg9Aj9KWXvhV1FU2w&s"
+                  class="cert-logo"></div>
+              <div class="tile-info">
+                <h3>IBM</h3>
+                <span class="match">HTML, CSS & JS</span>
+                <p>Introduction</p>
+              </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1-h-zVhFIiiLbo82Ekl0bMOAtKG-OVmRb/view" target="_blank"
+              class="tile tile-med">
+              <div class="tile-img cert-bg"><img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlt_7yu87RMVF4Ap1Is1oSxxs5N7xkDw3e6w&s"
+                  class="cert-logo"></div>
+              <div class="tile-info">
+                <h3>Google Cloud</h3>
+                <span class="match">AI & ML</span>
+                <p>Cloud Skills Boost</p>
+              </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1-1qtUOdy0Tojd6MiWqRCM3QouqXoaqH2/view?usp=drive_link"
+              target="_blank" class="tile tile-med">
+              <div class="tile-img cert-bg"><img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlt_7yu87RMVF4Ap1Is1oSxxs5N7xkDw3e6w&s"
+                  class="cert-logo"></div>
+              <div class="tile-info">
+                <h3>Google Cloud</h3>
+                <span class="match">Train & Deploy ML</span>
+                <p>Keras on Google Cloud</p>
+              </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1guJ1v8VL8shEpIqOtDZlhFzC5OTfE02Y/view?usp=sharing" target="_blank"
+              class="tile tile-med">
+              <div class="tile-img cert-bg"><img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlt_7yu87RMVF4Ap1Is1oSxxs5N7xkDw3e6w&s"
+                  class="cert-logo"></div>
+              <div class="tile-info">
+                <h3>Google Cloud</h3>
+                <span class="match">Feature Engineering</span>
+                <p>Google Cloud</p>
+              </div>
+            </a>
+          </div>
+          <button class="slider-btn right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Education Row -->
+      <div class="row" id="education">
+        <h2 class="row-title">Education</h2>
+        <div class="slider-wrapper">
+          <button class="slider-btn left"><i class="fas fa-chevron-left"></i></button>
+          <div class="row-container">
+            <div class="tile tile-about" onclick="openModal('education_btech')">
+              <div class="tile-img" style="background-image: url('miet_college.png'); background-size: cover; background-position: center;">
+                <div style="background: rgba(0, 0, 0, 0.6); width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px; box-sizing: border-box;">
+                  <i class="fas fa-graduation-cap" style="font-size: 2.5rem; margin-bottom: 10px; color: #e50914;"></i>
+                  <h2 style="font-size: 1.4rem; margin: 0; text-align: center;">B.Tech CSE (2023 - 2027)</h2>
+                </div>
+              </div>
+              <div class="tile-info">
+                <h3>Model Institute of Engineering & Technology (Autonomous)</h3>
+                <span class="match">2023 - 2027</span>
+                <p>B.Tech Computer Science & Engineering<br>Kot Bhalwal, Jammu - 181122</p>
+              </div>
+            </div>
+            <div class="tile tile-about" onclick="openModal('education_12th')">
+              <div class="tile-img bg-red" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px;">
+                <i class="fas fa-school" style="font-size: 2.5rem; margin-bottom: 10px; color: white;"></i>
+                <h2 style="font-size: 1.4rem; margin: 0; text-align: center;">12th Standard (2022)</h2>
+              </div>
+              <div class="tile-info">
+                <h3>Govt. Higher Secondary School</h3>
+                <span class="match">2022</span>
+                <p>Non Medical</p>
+              </div>
+            </div>
+            <div class="tile tile-about" onclick="openModal('education_10th')">
+              <div class="tile-img bg-dark" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px;">
+                <i class="fas fa-book" style="font-size: 2.5rem; margin-bottom: 10px; color: white;"></i>
+                <h2 style="font-size: 1.4rem; margin: 0; text-align: center;">10th Standard (2020)</h2>
+              </div>
+              <div class="tile-info">
+                <h3>Iqra Public Secondary School</h3>
+                <span class="match">2020</span>
+                <p>Secondary Education</p>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Contact Row -->
+      <div class="row" id="contact">
+        <h2 class="row-title">Contact</h2>
+        <div class="slider-wrapper">
+          <button class="slider-btn left"><i class="fas fa-chevron-left"></i></button>
+          <div class="row-container">
+            <a href="mailto:adnankaisar112@gmail.com" class="tile tile-small">
+              <div class="tile-img"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                  style="width:50px; margin-bottom:10px;"> <span>Email</span></div>
+              <div class="tile-info"><span class="match">Connect</span>
+                <p>adnankaisar112@gmail.com</p>
+              </div>
+            </a>
+            <a href="tel:+917780946112" class="tile tile-small">
+              <div class="tile-img"><svg viewBox="0 0 24 24" width="50" height="50" fill="#34a853"
+                  style="margin-bottom:10px;">
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                </svg> <span>Phone</span></div>
+              <div class="tile-info"><span class="match">Call</span>
+                <p>+91 7780946112</p>
+              </div>
+            </a>
+            <a href="https://github.com/AdnanKaisar" target="_blank" class="tile tile-small">
+              <div class="tile-img"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                  style="width:50px; filter: invert(1); margin-bottom:10px;"> <span>GitHub</span></div>
+              <div class="tile-info"><span class="match">Follow</span>
+                <p>github.com/AdnanKaisar</p>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/adnan-kaisar-333622292" target="_blank" class="tile tile-small">
+              <div class="tile-img"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+                  style="width:50px; margin-bottom:10px;"> <span>LinkedIn</span></div>
+              <div class="tile-info"><span class="match">Connect</span>
+                <p>Adnan Kaisar</p>
+              </div>
+            </a>
+          </div>
+          <button class="slider-btn right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Adnan Kaisar</p>
+      <div class="footer-icons">
+        <a href="https://github.com/AdnanKaisar" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/adnan-kaisar-333622292" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Detail Modal -->
+  <div id="detail-modal" class="modal hidden">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+      <div id="modal-img-container" class="modal-img-container">
+        <!-- Injected via JS -->
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-title">Title</h2>
+        <p id="modal-desc" class="modal-desc">Description goes here.</p>
+        <p id="modal-subdesc" class="modal-subdesc"></p>
+        <div id="modal-actions" class="modal-actions">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js?v=20260913-3"></script>
+</body>
+
+</html>
